@@ -1,0 +1,32 @@
+.grid {
+  display: grid; 
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 1em; 
+  margin: 0 auto; 
+  padding: 4em 1em; 
+  max-width: 1200px; 
+  text-align: center; 
+  overflow: hidden; 
+  user-select: none; 
+  box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr); 
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr; /* Un solo elemento por fila */
+    gap: 0.5em; /* Espaciado más reducido */
+    padding: 2em 0.5em; /* Ajusta el padding para dispositivos pequeños */
+  }
+}
